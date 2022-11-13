@@ -1,0 +1,11 @@
+.forms{
+    height: 35rem;
+    
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+    backdrop-filter: blur(0.1rem);
+}
+
+.forms a{
+    font-size: 40px;
+}
