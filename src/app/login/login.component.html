@@ -1,0 +1,31 @@
+<br>
+<h2 align="center" style="color: rgb(0, 0, 0);">ADMIN LOGIN</h2>
+<br>
+<div class="container">
+    <div class="row" style="color: rgb(0, 0, 0);">
+        <div class="col col-md-3"></div>
+        <div class="col col-md-6" id="brdr">
+            <form (ngSubmit)="identifyUser()">
+            <div class="row g-3">
+                <div class="col"></div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label"> <b>USERNAME</b></label>
+                    <input type="text" name="uname" [(ngModel)]="user.uname" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label"><b>PASSWORD</b></label>
+                    <input type="password" name="password" [(ngModel)]="user.password" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="text-align: center;">
+                    <button type="submit" class="btn btn-primary"><b>LOGIN</b></button>
+                </div>
+                <div class="col"></div>
+            </div>
+        </form>
+        </div>
+        <div class="col col-md-3"></div>
+    </div>
+</div>
+
+
+

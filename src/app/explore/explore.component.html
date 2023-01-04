@@ -1,246 +1,37 @@
-<div class="container-fluid ">
-    <div class="row g-2 p-3 text-center">
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3  d-flex justify-content-center ">
-            <div class="card" style="width: 20rem;">
-                <img src="https://images.unsplash.com/photo-1630938819488-ba7d1440d48b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2F5YW5hZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" style="height:13rem;" class="card-img-top " alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Chembra Peak</h5>
+ <br> <br><div class="container" style="color: black;">
+  <div class="row">
+    <h1 align="center">KNOW MORE ABOUT WAYANAD</h1>
+      <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> <br>
+          
+            <section class="light">
+              <div class="container py-2" *ngFor="let i of listCards">
+                <div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
+            
+                <article class="postcard light blue">
                   
-                  <a href="#" class="btn btn-primary">Click for more</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center ">
-            <div class="card " style="width: 20rem;">
-                <img src="https://images.unsplash.com/photo-1612602129074-750ca2e55465?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Banasura sagar dam</h5>
+                    <img class="postcard__img" src="{{i.image}}" alt="Image Title" />
                   
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+                  <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue">{{i.place}}</h1>
+                    <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>Wayanad,Kerala
+                      </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{i.detail}}</div>
+                  </div>
+                </article>
               </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://thewoodsresorts.com/uploads/media/edakkal-caves-wayanad61c470581708b.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Edakkal caves</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://thewoodsresorts.com/uploads/media/kuruva-island-in-wayanad62b03dc913e8a.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Kuruva isalnd</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://toim.b-cdn.net/pictures/travel_guide/attractions/thmb/pookot-lake-tour-249.jpeg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Pookode lake</h5>
-                 
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://www.tripnight.com/public/thumbs/monuments/4503/JTYZ5USuv6CP_468_738.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Neelimala</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://www.tourmyindia.com/states/kerala/images/Meenmutty-Falls-Wayanad-4.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Meenmutty waterfalls</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://images.pexels.com/photos/87415/tiger-sumatran-tiger-cat-predator-87415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Tholpetty wildlife sanctury</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Wayanad wildlife sanctury</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://www.holidify.com/images/cmsuploads/compressed/100816080236(BannerImage)SOOCHIPPARAWATERFALLSIMAGE-15_20180118201857.JPG" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Soochippara waterfalls</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Jain_temple%2C_Wayanad_IMG_3494_by_Joseph_Lazer.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Jain temple</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://www.coffeetrailresort.com/wp-content/uploads/2018/09/phantom-rock.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Phontom rock</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://live-core-api.travalour.com/common/v1/thumbnail/b4c7c1df-32e1-11ea-a2af-0ec82d6f8976?format=webp&width=480" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Lakkidi viewpoint</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-            <div class="card" style="width: 20rem;">
-                <img src="https://thehotelsnearme.com/wp-content/uploads/2021/06/Thirunelli-Temple3.jpg" style="height:13rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Thirunelli temple</h5>
-                  
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://www.keralatourism.org/images/picture/hri/Karlad_Lake_Wayanad_2465.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">
-                Karlad lake</h5>
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </section>
             </div>
           </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://pbs.twimg.com/media/Dux1di-VsAA0b40.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Krishnagiri cricket stadium</h5>
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
           </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-f3638004e4c8e3c.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Karapuzha dam</h5>
-             
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://planetgreenresorts.com/images/atractions/900kandi.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">900 kandi</h5>
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://cdn.tripuntold.com/media/photos/location/2020/09/24/9ee5173d-a219-481c-882a-1efd05065cef.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Aranamala</h5>
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://images.thrillophilia.com/image/upload/s--LmwfJr1d--/c_fill,h_600,q_auto,w_975/f_auto,fl_strip_profile/v1/images/photos/000/138/348/original/1543301328_shutterstock_690320167.jpg.jpg?1543301328" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Zipline</h5>
-             
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/79/1f/77/kabini-river.jpg?w=1200&h=-1&s=1" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Kabini river</h5>
-              
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Kurumbalakotta_hillock_08.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Kurumbaalakkotta</h5>
-             
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://www.keralatravelpal.com/images/thusharagiri.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Thusharagiri waterfalls</h5>
-             
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        <div class="col col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 d-flex justify-content-center">
-          <div class="card" style="width: 20rem;">
-            <img src="https://travelyy-prod.s3.amazonaws.com/activities/item/travel/5e34789e1152640ddbfcc7f9/bb0f243a4f92155f954e1002fad1b9a397119477.jpg" style="height:13rem;" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Nellarachal</h5>
-             
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
-        
-    </div>
-</div>
+
+
+
+
+          
+<app-footer> </app-footer>
+
+

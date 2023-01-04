@@ -1,0 +1,13 @@
+
+button:hover{
+    background-color: blue;
+    color:white;
+}
+
+button{
+    border-radius: 10px;
+}
+input{
+    border-radius: 10px;
+}
+

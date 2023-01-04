@@ -1,0 +1,91 @@
+<br> <br> 
+<form #ticForm="ngForm"  >
+<div class="container" style="color: rgb(0, 0, 0);">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="col col col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+                <div class="row">
+                        <h1 align="center">ADD TICKET RATE</h1> <br>
+                        <div class="row g-3">
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label"><b>SPOT</b></label>
+                                <input [(ngModel)]="pName" type="text" class="form-control" name="pName" required #name="ngModel" style="border: 1px solid black;">
+                                <small class="text-danger" *ngIf="ticForm.submitted&&name.errors?.['required']">Spot Required</small>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label"> <b> WORKING FROM</b></label>
+                                <input [(ngModel)]="pwrtime" type="time" class="form-control" name="pwrtime" required #wrtime="ngModel"  style="border: 1px solid black;">
+                                <small class="text-danger" *ngIf="ticForm.submitted&&wrtime.errors?.['required']">Working Time Required</small>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label"> <b>WORKING TILL</b></label>
+                                <input [(ngModel)]="pwrtimet" type="time" class="form-control" name="pwrtimet" required #wrtimet="ngModel" style="border: 1px solid black;" >
+                                <small class="text-danger" *ngIf="ticForm.submitted&&wrtimet.errors?.['required']">Working Time Required</small>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label"><b>TICKET RATES</b></label>
+                                <input [(ngModel)]="pticket" type="number" class="form-control" name="pticket" required #ticket="ngModel"  style="border: 1px solid black;">
+                                <small class="text-danger" *ngIf="ticForm.submitted&&ticket.errors?.['required']">Ticket Rate Required</small>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <button (click)="readData()" class="btn btn-success"> <b>ADD TICKET</b> </button> 
+                               </div>
+                               <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <button (click)="clearfield()" class="btn btn-success"><b>RESET FIELD</b></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-2"></div>
+            </div>
+        </div>  
+    </form>
+<br> <br> <br>
+        <!-- upload card data -->
+        <form action="">
+            <div class="container" style="color:black;">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <h1 align="center">ADD PLACES </h1> <br>
+                            <div class="row g-3" id="brd">
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <label for="" class="form-label"> <b>PLACE</b></label>
+                                    <input type="text" [(ngModel)]="place" class="form-control" name="place" style="border: 1px solid black;">
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                    <label for="" class="form-label"> <b>IMAGE URL</b> </label>
+                                    <input type="text" [(ngModel)]="image" class="form-control" name="image" style="border: 1px solid black;">
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <label for="" class="form-label"> <b>DESCRIPTION</b> </label>
+                                    <input type="text" [(ngModel)]="detail" class="form-control" name="detail" style="border: 1px solid black;">
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                    <button (click)="readCard()"  class="btn btn-success"> <b>UPLOAD</b> </button>
+                                </div>
+                                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"></div>
+                            </div>
+                            
+                        </div>
+                      
+                    </div>
+                    <div class="col-md-2"></div>
+                   
+                    
+                </div>
+            </div>
+        </form>
+        <br>
+    <section>
+        <app-footer></app-footer>
+    </section>
+
+
+
+
+

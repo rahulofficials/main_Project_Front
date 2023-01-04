@@ -1,0 +1,22 @@
+<br> <br>
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+  <h1 align="center">TICKET RATES</h1> <br>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">SPOT</div>
+      <div class="col col-2">WORKING FROM</div>
+      <div class="col col-3">WORKING TILL</div>
+      <div class="col col-4">TICKET RATES</div>
+    </li>
+    <li class="table-row" *ngFor="let i of listTickets">
+      <div class="col col-1" data-label="Spot">{{i.pName}}</div>
+      <div class="col col-2" data-label="Working From">{{i.pwrtime}}</div>
+      <div class="col col-3" data-label="Working Till"> {{i.pwrtimet}}</div>
+      <div class="col col-4" data-label="Ticket Rates">Rs.{{i.pticket}}</div>
+    </li>
+  </ul>
+  </div>
+  </div>
+</div>

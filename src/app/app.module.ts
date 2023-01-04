@@ -9,6 +9,20 @@ import { ExploreComponent } from './explore/explore.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { TicketsComponent } from './tickets/tickets.component';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { AddticketComponent } from './addticket/addticket.component';
+import { EditTicketComponent } from './edit-ticket/edit-ticket.component';
+import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
+import { CommonModule } from '@angular/common';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './token-interceptor.service';
+import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -18,13 +32,28 @@ import { FooterComponent } from './footer/footer.component';
     ExploreComponent,
     AboutComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    TicketsComponent,
+    AddticketComponent,
+    EditTicketComponent,
+    LoginComponent,
+    UpdateTicketComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    CommonModule
   ],
-  providers: [],
+  providers: [AuthService,AuthGuard,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptorService,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
