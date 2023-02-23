@@ -15,6 +15,10 @@
                             <small class="text-danger" *ngIf="updateForm.submitted&&name.errors?.['required']">Field Required</small>
                             </div>
                             <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label">DISTRICT</label>
+                                <input type="text" class="form-control" [(ngModel)]="data.pdis" name="data.pdis">
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                                 <label for="" class="form-label"> <b> WORKING FROM</b></label>
                                 <input [(ngModel)]="data.pwrtime" type="time" class="form-control" name="data.pwrtime" required #wrtime="ngModel"  >
                             <small class="text-danger" *ngIf="updateForm.submitted&&wrtime.errors?.['required']">Field Required</small>
@@ -25,8 +29,13 @@
                             <small class="text-danger" *ngIf="updateForm.submitted&&wrtimet.errors?.['required']">Field Required</small>
                             </div>
                             <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                                <label for="" class="form-label"><b>TICKET RATES</b></label>
+                                <label for="" class="form-label"><b>CHILDREN</b></label>
                                 <input [(ngModel)]="data.pticket" type="number" class="form-control" name="data.pticket" required #ticket="ngModel" >
+                            <small class="text-danger" *ngIf="updateForm.submitted&&ticket.errors?.['required']">Field Required</small>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+                                <label for="" class="form-label"><b>ADULT</b></label>
+                                <input [(ngModel)]="data.pticketA" type="number" class="form-control" name="data.pticketA" required #ticket="ngModel" >
                             <small class="text-danger" *ngIf="updateForm.submitted&&ticket.errors?.['required']">Field Required</small>
                             </div>
                             <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">

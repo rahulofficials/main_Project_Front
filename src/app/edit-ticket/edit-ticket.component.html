@@ -1,4 +1,7 @@
 <br> 
+<div id="bnt" class="container" align="center">                    
+  <button class="btn btn-success" (click)="navigateToadd()" >ADD NEW ENTRY</button>
+</div> <br>
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
@@ -6,22 +9,26 @@
           <table class="table table-striped" style="color:black" >
               <thead>
                 <tr>
+                  <th scope="col"><h6>S.No</h6></th>
                   <th scope="col"><h6>SPOT</h6></th>
-                  <th scope="col"><h6>WORKING FROM</h6></th>
-                  <th scope="col"><h6>WORKING TILL</h6></th>
-                  <th scope="col"><h6>TICKET RATE</h6></th>
+                  <th scope="col"><h6>DISTRICT</h6></th>
+                  <th scope="col"><h6>WORKING <br> FROM</h6></th>
+                  <th scope="col"><h6>WORKING <br> TILL</h6></th>
+                  <th scope="col"><h6>CHILDREN</h6></th>
+                  <th scope="col"><h6>ADULT</h6></th>
                   <th scope="col"><h6>EDIT</h6></th>
                   <th scope="col"><h6>DELETE</h6></th>
-
-                 
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let i of editTickets">
-                  <th scope="row">{{i.pName}}</th>
+                <tr *ngFor="let i of editTickets; let x=index">
+                  <td scope="row">{{x+1}}</td>
+                  <td scope="row">{{i.pName}}</td>
+                  <td>{{i.pdis}}</td>
                   <td>{{i.pwrtime}}</td>
                   <td>{{i.pwrtimet}}</td>
                   <td>Rs.{{i.pticket}}</td>
+                  <td>Rs.{{i.pticketA}}</td>
                   <td><button  (click)="navigateToEdit(i._id)"class="btn btn-warning"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
                     <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
                   </svg></button> </td>

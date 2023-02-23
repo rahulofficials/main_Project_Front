@@ -1,0 +1,63 @@
+<br>
+<section>
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card">
+                <div class="row g-3">
+                    <h4 align="center">ADD RESTAURANTS IN NILGIRIS</h4>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="pname"  name="pname" style="text-transform: uppercase;" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Image Url</label>
+                        <input type="text" class="form-control" [(ngModel)]="pimage"  name="pimage" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Rating</label>
+                        <input type="number" class="form-control" [(ngModel)]="prating"  name="prating" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Direction Url</label>
+                        <input type="text" class="form-control" [(ngModel)]="pdirection"  name="pdirection" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <button class="btn btn-success" (click)="addRest()">UPLOAD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card">
+                <div class="row g-3">
+                    <h4 align="center">ADD RESTAURANTS IN WAYANAD</h4>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Name</label>
+                        <input type="text" class="form-control" [(ngModel)]="wname"  name="wname" style="text-transform: uppercase;" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Image Url</label>
+                        <input type="text" class="form-control" [(ngModel)]="wimage"  name="wimage" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Rating</label>
+                        <input type="number" class="form-control" [(ngModel)]="wrating"  name="wrating" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <label for="" class="form-label">Restaurant Direction Url</label>
+                        <input type="text" class="form-control" [(ngModel)]="wdirection"  name="wdirection" >
+                    </div>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                        <button class="btn btn-success" (click)="addWrest()">UPLOAD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+ <br> <br> 
+<section>
+    <app-footer></app-footer>
+</section>

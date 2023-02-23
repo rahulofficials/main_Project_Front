@@ -1,33 +1,44 @@
      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
+      <div class="navbar-brand" *ngIf="_auth.loggedIn()" >ADMIN PAGE</div>
+      <div class="navbar-brand" *ngIf="!_auth.loggedIn()" >GoTour</div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link "  aria-current="page" routerLink="">𝐇𝐨𝐦𝐞</a>
+            <a class="nav-link "  aria-current="page" routerLink="">Home</a>
           </li>
           <li class="nav-item">
-            <a id="onmouse" class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="explore">𝐄𝐱𝐩𝐥𝐨𝐫𝐞</a>
+            <a id="onmouse" class="nav-link"  routerLink="explore"> Explore Wayanad</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="about">𝐀𝐛𝐨𝐮𝐭</a>
+            <a id="onmouse" class="nav-link" routerLink="nexplore"> Explore Nilgiris</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="tickets">𝐓𝐢𝐜𝐤𝐞𝐭𝐬</a>
+            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="tickets">Ticket Price</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="login">𝐀𝐝𝐦𝐢𝐧 𝐋𝐨𝐠𝐢𝐧</a>
+            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="suggest">Suggetions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " *ngIf="_auth.loggedIn()" routerLink="addTicket">𝐀𝐝𝐝 𝐓𝐢𝐜𝐤𝐞𝐭𝐬</a>
+            <a class="nav-link " *ngIf="_auth.loggedIn()" routerLink="editTicket">Ticket Price</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " *ngIf="_auth.loggedIn()" routerLink="editTicket">𝐄𝐝𝐢𝐭 𝐓𝐢𝐜𝐤𝐞𝐭𝐬</a>
+            <a class="nav-link " *ngIf="_auth.loggedIn()" routerLink="showsuggest">User Suggestions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " (click)="logoutUser()" *ngIf="_auth.loggedIn()" routerLink="#">𝐋𝐨𝐠𝐨𝐮𝐭</a>
+            <a class="nav-link" routerLink="roomStay">Room Stay</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="restaurants">Restaurants</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " *ngIf="!_auth.loggedIn()" routerLink="login">Admin Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: red;"  (click)="logoutUser()" *ngIf="_auth.loggedIn()" routerLink="#">Logout</a>
           </li>
            
         

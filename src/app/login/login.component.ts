@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+
+declare var myFunction:any   //javascript Declaration
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,4 +31,9 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+
+showPassword=()=>{
+  new myFunction()
+}
 }

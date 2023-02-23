@@ -1,7 +1,8 @@
 .way{
     color: rgba(0, 0, 0, 0.7);
-    font-size: 6rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5.5rem;
+    font-family: 'Piedra', cursive;
+    color:gainsboro
 }
 
 .waya{
@@ -12,10 +13,11 @@
 
 
 .hme{
-    background-image: url("/assets/dream-holidays-Jqc2nOH3u3Y-unsplash.jpg");
+    background-image: url("src/assets/dream-holidays-Jqc2nOH3u3Y-unsplash.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 /* cards */
 body{
@@ -119,5 +121,35 @@ body{
 /* cards end */
 
 h1{
-  font-family:Georgia;
+  font-family:'Poppins', sans-serif;
+}
+
+/*  History Carousel starts */
+#card{
+  padding-bottom: 4%;
+  padding-top: 4%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 30px;
+}
+#card img{
+  border-radius: 30px;
+}
+
+h5{
+font-family:monospace;
+color:black;
+background-color: #fff;
+border-radius: 100px;
+}
+
+#htext{
+  font-family: 'Poppins', sans-serif;
+}
+p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+button:hover{
+  background-color: darkblue;
 }

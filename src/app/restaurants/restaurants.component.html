@@ -1,0 +1,61 @@
+ <br> 
+ <h2 align="center">RESTAURANTS</h2>
+ <!-- ========================== ADD BUTTON ====================================== -->
+ <div class="container" align="center">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <button id="buton" class="btn btn-primary" *ngIf="_auth.loggedIn()" (click)="navigateTo()">ADD RESTAURANTS</button>
+    </div>
+  </div>
+ </div> <br>
+
+ <!-- ==================== NILGIRI RESTAURANTS ======================================== -->
+
+ <div class="container">
+  <div class="row g-3">
+    <button class="btn btn-success" (click)="getrest()" >RESTAURANTS IN NILGIRIS</button>
+  </div>
+ </div> <br>
+<!-- ================== CARD DATA ====================== -->
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4" *ngFor="let i of listOfRest">
+            <div class="card">
+                <img src="{{i.pimage}}" alt="Avatar" style="width:100%">
+                <div class="container"> <br>
+                  <h5><b>{{i.pname}}</b></h5>
+                  <p>{{i.prating}} Star Rating </p>
+                  <a href="{{i.pdirection}}"><button class="btn btn-primary">Direction</button> </a>
+                  <!-- blank div to increase space at bottom -->
+                  <div> <p></p> </div>
+                </div>
+                  <button class="btn btn-danger" *ngIf="_auth.loggedIn()" (click)="deleteRest(i._id)" >DELETE</button>
+              </div>
+        </div>
+    </div>
+</div>
+<br>
+<!-- =========================== WAYANAD RESTURANTS =============================== -->
+ <div class="container">
+  <div class="row g-3">
+    <button class="btn btn-success" (click)="getwrest()" >RESTAURANTS IN WAYANAD</button>
+  </div>
+ </div> <br>
+<!-- ================= CARD DATA =================== -->
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4" *ngFor="let i of listOfwRest">
+            <div class="card">
+                <img src="{{i.wimage}}" alt="Avatar" style="width:100%">
+                <div class="container"> <br>
+                  <h5><b>{{i.wname}}</b></h5>
+                  <p>{{i.wrating}} Star Rating </p>
+                  <a href="{{i.wdirection}}"><button class="btn btn-primary">Direction</button> </a>
+                  <!-- blank div to increase space at bottom -->
+                  <div> <p></p> </div>
+                </div>
+                    <button class="btn btn-danger" *ngIf="_auth.loggedIn()" (click)="deletewRest(i._id)" >DELETE</button>
+              </div>
+        </div>
+    </div>
+</div>

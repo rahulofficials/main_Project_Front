@@ -1,0 +1,47 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
+  /* card with side curved */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+  }
+  
+  img {
+    border-radius: 5px 5px 0 0;
+    height: 250px;
+  }
+#buton{
+border-radius: 30px;
+}
+
+#add_buton{
+  border-radius: 30px;
+}
+
+#add_buton:hover{
+  background-color: white;
+  color: black;
+}
+
+#del_btn:hover{
+  color:black ;
+}
+
+#book_buton{
+  border-radius: 30px;
+}
+#book_buton:hover{
+background-color:darkblue;
+}

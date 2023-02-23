@@ -1,0 +1,39 @@
+<br> <br> <br>
+<form>
+    <div class="container" style="color:black;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="card">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h2 align="center">ADD PLACES(WAYANAD)</h2> <br>
+                    <div class="row g-3" id="brd">
+                        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label"> <b>PLACE</b></label>
+                            <input type="text" [(ngModel)]="place" class="form-control" name="place"  placeholder="Input the Place Name" >
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label"> <b>IMAGE URL</b> </label>
+                            <input type="text" [(ngModel)]="image" class="form-control" name="image" placeholder="Input the Image Url" >
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <label for="" class="form-label"> <b>DESCRIPTION</b> </label>
+                            <input type="text" [(ngModel)]="detail" class="form-control" name="detail" placeholder="Input the Description of the Place">
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <button (click)="readCard()"  class="btn btn-success">UPLOAD</button>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <button (click)="clearfield()"  class="btn btn-success"> RESET FIELDS </button>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"></div>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <div class="col-md-2"></div>  
+        </div>
+    </div>
+    </div>
+</form>

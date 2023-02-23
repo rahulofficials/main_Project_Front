@@ -1,0 +1,51 @@
+<br>
+<div class="container" align="center">
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" *ngIf="_auth.loggedIn()" >
+      <button class="btn btn-success" (click)="navigateTo()">ADD DATA</button>
+    </div>
+  </div>
+</div>
+ <br>
+ <br>
+ <div class="container" style="color: black;">
+  <div class="row" >
+    <h1 align="center">TOURIST TRAPS IN NILGIRIS</h1>
+      <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+            <section class="light">
+              <div class="container py-2" *ngFor="let i of listCards">
+                <div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
+            
+                <article class="postcard light blue">
+                  
+                    <img class="postcard__img" src="{{i.image}}" alt="Image Title" />
+                  
+                  <div class="postcard__text t-dark">
+                    <h1 class="postcard__title blue">{{i.place}}</h1>
+                    <div class="postcard__subtitle small">
+                      <time datetime="2020-05-25 12:00:00">
+                        <i class="fas fa-calendar-alt mr-2"></i>The Nilgiris,TamilNadu
+                      </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{i.detail}}</div>
+                  </div>
+                </article>
+                <button class="btn btn-danger" (click)="deletenCard(i._id)" *ngIf="_auth.loggedIn()" > <b> DELETE</b></button>
+              </div>
+            </section>
+            </div>
+          </div>
+          </div>
+<br>
+<section>
+  
+    
+</section>
+
+<br>
+
+          
+<app-footer> </app-footer>
+
+

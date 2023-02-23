@@ -1,0 +1,80 @@
+<br> 
+<div class="container">
+    <div class="row g-3">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> 
+            <div class="card" *ngFor=" let i of listSuggestData; let x=index" >
+                <h5 class="card-header">Suggestion: {{x+1}}</h5>
+                <div class="card-body">
+                    <h4>Suggestor Info</h4> <hr>
+                    <table>
+                        <tr>
+                            <th><p class="card-text">Name:</p></th>
+                            <th>{{i.uname}}</th>
+                        </tr>
+                        <tr>
+                            <th><p class="card-text">Email:</p></th>
+                            <th>{{i.uemail}}</th>
+                        </tr>
+                        <tr>
+                            <th><p class="card-text">Phone:</p></th>
+                            <th>{{i.uphone}}</th>
+                        </tr>
+                        <tr>
+                            <th><p class="card-text">District:</p></th>
+                            <th>{{i.udistrict}}</th>
+                        </tr>
+                        <tr>
+                            <th><p class="card-text">Locality: &nbsp; &nbsp; </p></th>
+                            <th>{{i.ulocality}}</th>
+                        </tr>
+                    </table> <br>
+                  
+                  <h4>Suggested Place</h4> <hr>
+                  <table>
+                    <tr>
+                        <th>
+                            <p class="card-text">Location:</p>
+                        </th>
+                        <th>{{i.ulocation}}</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="card-text">District:</p>
+                        </th>
+                        <th>{{i.usdistrict}}</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="card-text">Landmark:</p>
+                        </th>
+                        <th>{{i.ulankmark}}</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="card-text">Town:</p>
+                        </th>
+                        <th>{{i.utown}}</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="card-text">Police Station: &nbsp; &nbsp;</p>
+                        </th>
+                        <th>{{i.upstation}}</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p class="card-text">Description:</p>
+                        </th>
+                        <th>{{i.udetail}}</th>
+                    </tr>
+                  </table>
+                  <button class="btn btn-danger" (click)="deleteData(i._id)" align="center" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
+                    <path d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"/>
+                  </svg></button>
+                </div>
+              </div>
+              <br> <br>
+        </div>
+    </div>
+</div>
+

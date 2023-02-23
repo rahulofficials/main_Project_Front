@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { ExploreComponent } from './explore/explore.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
@@ -20,6 +19,17 @@ import { CommonModule } from '@angular/common';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
+import { NilgiriexploreComponent } from './nilgiriexplore/nilgiriexplore.component';
+import { SuggestComponent } from './suggest/suggest.component';
+import { ShowSuggestComponent } from './show-suggest/show-suggest.component';
+import { AddcardsComponent } from './addcards/addcards.component';
+import { AddnCardsComponent } from './addn-cards/addn-cards.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { RoomStayComponent } from './room-stay/room-stay.component';
+import { AddroomsComponent } from './addrooms/addrooms.component';
+import { AddRestaurantsComponent } from './add-restaurants/add-restaurants.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 
@@ -31,13 +41,22 @@ import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
     HomeComponent,
     ExploreComponent,
     AboutComponent,
-    ContactComponent,
     FooterComponent,
     TicketsComponent,
     AddticketComponent,
     EditTicketComponent,
     LoginComponent,
     UpdateTicketComponent,
+    NilgiriexploreComponent,
+    SuggestComponent,
+    ShowSuggestComponent,
+    AddcardsComponent,
+    AddnCardsComponent,
+    RestaurantsComponent,
+    RoomStayComponent,
+    AddroomsComponent,
+    AddRestaurantsComponent,
+
 
 
   ],
@@ -46,7 +65,8 @@ import { UpdateTicketComponent } from './update-ticket/update-ticket.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    CommonModule
+    CommonModule,
+    Ng2SearchPipeModule
   ],
   providers: [AuthService,AuthGuard,
   {

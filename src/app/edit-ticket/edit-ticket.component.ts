@@ -26,7 +26,7 @@ export class EditTicketComponent implements OnInit {
        
   ngOnInit(): void {
   }
-  editTickets:any=[];   //creating ARRAY for incoming Data
+  editTickets:any=[];     //creating ARRAY for incoming Data
 
   // DELETE EVENT
 
@@ -49,4 +49,9 @@ navigateToEdit(id:any) {
  this.router.navigate([`/edit/${id}`])
   }
 
+
+//Navigating to add Page 
+navigateToadd=()=>{
+  this.router.navigate(["addTicket"])
+} 
 }

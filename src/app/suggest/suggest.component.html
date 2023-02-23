@@ -1,0 +1,69 @@
+<div class="suggest">
+<br> <br>
+ <h4 align="center">USER CAN SUGGEST ANY HIDDEN ATTRACTIVE SPOTS WHICH IS NOT MENTIONED IN THIS WEBSITE</h4> 
+<div class="container">
+    <div class="card">
+        <form >
+        <div class="row g-3">
+                <h2 align="center">DETAILS OF THE SUGGESTOR</h2> <br>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" required>
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" id="uname" class="form-control" [(ngModel)]="uname"  name="uname" style="text-transform: capitalize;" >
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Email</label>
+                    <input type="email" id="uemail" class="form-control" [(ngModel)]="uemail"  name="uemail" >
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Phone Number</label>
+                    <input type="number" id="uphone" class="form-control" [(ngModel)]="uphone"  name="uphone" maxlength="10" >
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">District</label>
+                    <input type="text" id="udistrict" class="form-control" [(ngModel)]="udistrict"  name="udistrict"  style="text-transform: capitalize;"  >
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Locality</label>
+                    <input type="text" id="ulocality" class="form-control" [(ngModel)]="ulocality"  name="ulocality"  style="text-transform: capitalize;"  >
+                </div>
+        <br> <br>
+            <h2 align="center">DETAILS OF THE SPOT </h2> <br>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Location</label>
+                <input type="text" id="ulocation" class="form-control" [(ngModel)]="ulocation"  name="ulocation"  style="text-transform: capitalize;"  >
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">District</label>
+                <input type="text" id="usdistrict" class="form-control" [(ngModel)]="usdistrict"  name="usdistrict"  style="text-transform: capitalize;"  >
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Land Mark</label>
+                <input type="text" id="ulankmark" class="form-control" [(ngModel)]="ulankmark"  name="ulankmark"  style="text-transform: capitalize;"  >
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Nearest Town</label>
+                <input type="text" id="utown" class="form-control" [(ngModel)]="utown"  name="utown"  style="text-transform: capitalize;"  >
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Nearest Police Station</label>
+                <input type="text" id="upstation" class="form-control" [(ngModel)]="upstation"  name="upstation"   style="text-transform: capitalize;" >
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <label for="" class="form-label">Detailed Description of the Spot</label>
+                <input type="textarea" id="udetail" class="form-control" [(ngModel)]="udetail"  name="udetail" >
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" align="center">
+                <button id="submit_buton" type="submit" class="btn btn-success" [disabled]="!isFormValid()" (click)="addData()">SUBMIT THE DATA</button>
+            </div>
+            <br> 
+            <div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>THANK YOU!</strong> Suggetion Accepeted Succesfully
+                <button (click)="closeButton()" type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        </div>
+    </form>
+    </div>
+</div>
+<br> <br>
+</div>  
+<app-footer></app-footer>

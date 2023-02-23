@@ -15,9 +15,11 @@ updateForm = FormGroup;
   constructor(private api:ApiService ,private route:ActivatedRoute, private Router:Router) { }
 id:any
 data={
+  pticketA:'',
   pticket:'',
   pwrtimet:'',
   pwrtime:'',
+  pdis:'',
   pName:''
   }
   

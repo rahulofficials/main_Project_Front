@@ -1,8 +1,12 @@
- <br> <br><div class="container" style="color: black;">
-  <div class="row">
-    <h1 align="center">KNOW MORE ABOUT WAYANAD</h1>
-      <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"> <br>
-          
+<br> 
+<div class="container" align="center">
+  <button class="btn btn-success" *ngIf="_auth.loggedIn()" (click)="navigateTo()">ADD DATA</button>
+  </div>
+ <br> <br>
+    <div class="container" style="color: black;">
+        <div class="row" >
+              <h1 align="center">TOURIST TRAPS IN WAYANAD</h1>
+              <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <section class="light">
               <div class="container py-2" *ngFor="let i of listCards">
                 <div class="h1 text-center text-dark" id="pageHeaderTitle"></div>
@@ -22,14 +26,16 @@
                     <div class="postcard__preview-txt">{{i.detail}}</div>
                   </div>
                 </article>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                  <button class="btn btn-danger" *ngIf="_auth.loggedIn()" (click)="deletecard(i._id)" >DELETE</button>
+                </div>
               </div>
             </section>
             </div>
           </div>
           </div>
-
-
-
+          
+<br> <br>
 
           
 <app-footer> </app-footer>

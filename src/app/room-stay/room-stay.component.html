@@ -1,0 +1,76 @@
+<br>
+<h2 align="center">ROOM STAY</h2>
+<!-- ===============BOOK BUTTON =========== -->
+<div class="container" align="center">
+  <div class="row g-3">
+    <a href="https://www.trip.com/">
+      <button id="book_buton" class="btn btn-primary"  (click)="alertonclick()"> BOOK ROOMS </button>
+    </a>
+  </div>
+</div>
+ <!--===ADD BUTTON -->
+ <div class="container" align="center" *ngIf="_auth.loggedIn()" >
+  <div class="row g-3">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <a> <button id="add_buton" class="btn btn-primary"  (click)="navigateTo()">ADD ROOMS</button> </a>
+    </div>
+  </div>
+ 
+ </div> <br>
+ <div class="container">
+  <div class="row g-3">
+    <button (click)="getrooms()" class="btn btn-success">ROOMSTAY IN NILGIRIS</button>
+  </div>
+ </div>
+<br>
+<!--============================ NILGIRI ================================================ -->
+<section>
+<div class="container">
+  <div class="row g-3"  >
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4" *ngFor="let i of listOfRooms">
+      <div class="card">
+        <img src="{{i.pimage}}" alt="Avatar" style="width:100%"> <br>
+        <div class="container">
+          <h6><b>{{i.pname}}</b></h6>
+          <p>{{i.prating}} Star Rating</p>
+          <a href="{{i.pdirection}}"><button class="btn btn-primary" >Direction</button> </a>
+          <!-- blank div to increase space at bottom -->
+          <div> <p></p> </div>
+        </div>
+        <button id="clr" class="btn btn-danger" *ngIf="_auth.loggedIn()"  (click)="deleterooms(i._id)" >DELETE</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<br>
+
+<div class="container">
+  <div class="row g-3">
+    <button (click)="getwRooms()" class="btn btn-success">ROOMSTAY IN WAYANAD</button>
+  </div>
+ </div>
+ <br>
+
+<!--================ WAYANAD ==========================-->
+<section>
+  <div class="container">
+    <div class="row g-3"  >
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-6 col-xl-4 col-xxl-4" *ngFor="let i of listOfwRooms">
+        <div class="card">
+          <img src="{{i.wimage}}" alt="Avatar" style="width:100%"> <br>
+          <div class="container">
+            <h6><b>{{i.wname}}</b></h6>
+            <p>{{i.wrating}} Star Rating</p>
+            <a href="{{i.wdirection}}"><button class="btn btn-primary">Direction</button> </a>
+            <!-- blank div to increase space at bottom -->
+            <div> <p></p> </div>
+          </div>
+          <button id="del_btn" class="btn btn-danger" *ngIf="_auth.loggedIn()"  (click)="deleteWrooms(i._id)" >DELETE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>

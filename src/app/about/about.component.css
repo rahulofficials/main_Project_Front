@@ -1,11 +1,10 @@
-.about{
-    height: 35rem;
-    
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 2rem;
-    backdrop-filter: blur(0.1rem);
-    text-align: center;
-    
-    
+p{
+    color: black;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

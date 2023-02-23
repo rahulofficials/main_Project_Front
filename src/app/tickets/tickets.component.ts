@@ -8,6 +8,7 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./tickets.component.scss']
 })
 export class TicketsComponent implements OnInit {
+searchText: any;
 
   constructor(private api:ApiService, public _auth:AuthService) { 
     this.fetchData()

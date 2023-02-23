@@ -15,19 +15,23 @@ export class AddticketComponent implements OnInit {
   }
 
 
-data: any
+
 
 pName=""
+pdis=""
 pwrtime=""
 pwrtimet=""
 pticket=""
+pticketA=""
 
 readData=()=>{
   let data={
 "pName":this.pName,
+"pdis":this.pdis,
 "pwrtime":this.pwrtime,
 "pwrtimet":this.pwrtimet,
 "pticket":this.pticket,
+"pticketA":this.pticketA,
 }
 console.log(data)
 this.api.addTicket(data).subscribe(
@@ -40,37 +44,14 @@ this.api.addTicket(data).subscribe(
 )
 }
 
-// add card data
-
-place=""
-image=""
-detail=""
-
-readCard=()=>{
-  let card={
-    "place":this.place,
-    "image":this.image,
-    "detail":this.detail
-  }
-  console.log(card)
-  this.api.addCards(card).subscribe(
-    (response)=>{
-      console.log(response)
-      alert("Data added Succesfully")
-      this.clearfield()
-    }
-  )
-}
 
 // clear field
 clearfield=()=>{
   this.pName=''
+  this.pdis=''
   this.pwrtime=''
   this.pticket=''
   this.pwrtimet=''
-  this.place=''
-  this.image=''
-  this.detail=''
 }
 
 
